@@ -267,7 +267,7 @@ ok "Gaming packages installed."
 # --- NVIDIA Drivers (RTX 3090 Ti) -------------------------------------------
 info "Installing NVIDIA drivers for RTX 3090 Ti..."
 sudo pacman -S --noconfirm \
-    nvidia \
+    nvidia-open \
     nvidia-utils \
     nvidia-settings \
     lib32-nvidia-utils \
