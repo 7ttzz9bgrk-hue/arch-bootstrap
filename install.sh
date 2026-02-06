@@ -194,6 +194,15 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 EOF
 fi
+
+# Alias neofetch to fastfetch (neofetch is archived and removed from repos)
+if [[ -f "$HOME/.zshrc" ]] && ! grep -q "alias neofetch" "$HOME/.zshrc"; then
+    cat >> "$HOME/.zshrc" << 'EOF'
+
+# neofetch was removed from Arch repos — use fastfetch instead
+alias neofetch='fastfetch'
+EOF
+fi
 ok "Zsh plugins installed."
 
 # --- Git Config Reminder ----------------------------------------------------
