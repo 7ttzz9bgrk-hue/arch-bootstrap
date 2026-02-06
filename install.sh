@@ -49,7 +49,6 @@ sudo pacman -S --noconfirm --needed \
     p7zip \
     htop \
     btop \
-    neofetch \
     fastfetch \
     man-db \
     man-pages \
