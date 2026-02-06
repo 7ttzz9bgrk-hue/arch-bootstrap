@@ -169,7 +169,7 @@ ok "Firewall configured."
 info "Installing zsh..."
 sudo pacman -S --noconfirm --needed zsh
 if [[ "$SHELL" != *"zsh"* ]]; then
-    chsh -s "$(which zsh)"
+    sudo chsh -s "$(which zsh)" "$USER"
     ok "Default shell changed to zsh (takes effect on next login)."
 fi
 
